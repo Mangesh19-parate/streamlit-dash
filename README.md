@@ -1,3 +1,7 @@
+## 🚀 Live Demo
+
+🔗 https://startup-investment-dashboard.streamlit.app/
+
 # 💰 Startup Funding Intelligence Dashboard
 
 > An interactive, multi-view analytics dashboard that explores startup funding trends across industries, cities, investors, and time using Python and Streamlit.
