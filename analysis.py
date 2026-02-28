@@ -63,7 +63,8 @@ def load_overall_analysis(df):
     for bar in bars:
         ax.text(bar.get_x()+bar.get_width()/2, bar.get_height()*1.01,
                 fmt(bar.get_height()), ha="center", va="bottom", fontsize=7.5, fontweight="bold")
-    ax.set_xticklabels(ind_fund.index, rotation=30, ha="right", fontsize=9)
+    ax.set_xticks(range(len(ind_fund.index)))  # Fix the number of ticks first
+ax.set_xticklabels(ind_fund.index, rotation=30, ha="right", fontsize=9)
     _yax_fmt(ax); _despine(ax)
     ax.set_ylabel("Total Funding")
     plt.tight_layout()
@@ -136,7 +137,8 @@ def load_overall_analysis(df):
     for bar in bars6:
         ax6.text(bar.get_x()+bar.get_width()/2, bar.get_height()*1.01,
                  fmt(bar.get_height()), ha="center", va="bottom", fontsize=7, fontweight="bold")
-    ax6.set_xticklabels(top_start.index, rotation=35, ha="right", fontsize=8.5)
+    ax6.set_xticks(range(len(ind_fund.index)))  
+ax6.set_xticklabels(ind_fund.index, rotation=30, ha="right", fontsize=9)
     _yax_fmt(ax6); _despine(ax6)
     ax6.set_ylabel("Total Raised")
     plt.tight_layout()
