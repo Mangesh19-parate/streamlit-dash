@@ -1,3 +1,4 @@
+![Streamlit](https://img.shields.io/badge/deployed%20on-streamlit-orange)
 ## 🚀 Live Demo
 
 🔗 https://startup-investment-dashboard.streamlit.app/
