@@ -32,16 +32,16 @@ filtered_df = apply_filters(df)
 
 # Navigation
 st.sidebar.markdown("---")
-st.sidebar.markdown("## 🧭 Navigation")
+st.sidebar.markdown("## Navigation")
 option = st.sidebar.radio(
-    "", ["📊 Overall Analysis", "🚀 Startup POV", "💼 Investor POV"]
+    "", ["Overall Analysis", " Startup POV", "Investor POV"]
 )
 
-if option == "📊 Overall Analysis":
+if option == "Overall Analysis":
     load_overall_analysis(filtered_df)
 
-elif option == "🚀 Startup POV":
-    st.sidebar.markdown("### 🔍 Search Startup")
+elif option == "Startup POV":
+    st.sidebar.markdown("### Search Startup")
     search = st.sidebar.text_input("Type to search...", "")
     startup_list = sorted(filtered_df["Startup"].unique())
     if search:
@@ -52,8 +52,8 @@ elif option == "🚀 Startup POV":
         startup = st.sidebar.selectbox("Select Startup", startup_list)
         load_startup_details(filtered_df, startup)
 
-elif option == "💼 Investor POV":
-    st.sidebar.markdown("### 🔍 Search Investor")
+elif option == " Investor POV":
+    st.sidebar.markdown("### Search Investor")
     search = st.sidebar.text_input("Type to search...", "")
     inv_list = sorted(
         filtered_df["Investors"].str.split(",").explode()
