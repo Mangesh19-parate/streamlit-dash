@@ -34,7 +34,9 @@ filtered_df = apply_filters(df)
 st.sidebar.markdown("---")
 st.sidebar.markdown("## Navigation")
 option = st.sidebar.radio(
-    "", ["Overall Analysis", " Startup POV", "Investor POV"]
+    label="Navigation Menu", 
+    options=["Overall Analysis", "StartUp POV", "Investor POV"], 
+    label_visibility="collapsed"
 )
 
 if option == "Overall Analysis":
